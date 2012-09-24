@@ -10,8 +10,7 @@ import org.powerbot.core.script.job.state.Tree;
 import org.powerbot.game.api.util.Random;
 import org.powerbot.game.api.util.Timer;
 
-public abstract class ScriptWrapper extends
-		org.powerbot.core.script.ActiveScript {
+public abstract class ScriptWrapper extends org.powerbot.core.script.ActiveScript {
 
 	public final Timer runTime;
 	private final List<Node> jobCollection;
@@ -28,8 +27,7 @@ public abstract class ScriptWrapper extends
 				jobCollection.add(job);
 			}
 		}
-		jobContainer = new Tree(jobCollection.toArray(new Node[jobCollection
-				.size()]));
+		jobContainer = new Tree(jobCollection.toArray(new Node[jobCollection.size()]));
 	}
 
 	public final void revoke(final Node... jobs) {
@@ -38,8 +36,7 @@ public abstract class ScriptWrapper extends
 				jobCollection.remove(job);
 			}
 		}
-		jobContainer = new Tree(jobCollection.toArray(new Node[jobCollection
-				.size()]));
+		jobContainer = new Tree(jobCollection.toArray(new Node[jobCollection.size()]));
 	}
 
 	public final void submit(final Job job) {

@@ -11,7 +11,8 @@ import simplechop.util.Paint;
 
 import wrappers.ScriptWrapper;
 
-@Manifest(authors = { "ArcaneSanity" }, name = "Simple Chop Wrapper Edition", description = "Simple woodcutting script utilizing ScriptWrapper")
+@Manifest(authors = { "ArcaneSanity" }, name = "Simple Chop Wrapper Edition", 
+		description = "Simple woodcutting script utilizing ScriptWrapper")
 public class SimpleChopWrapper extends ScriptWrapper implements PaintListener {
 
 	@Override

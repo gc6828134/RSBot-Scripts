@@ -16,19 +16,18 @@ import simplechop.jobs.Chop;
 import simplechop.jobs.Drop;
 import simplechop.util.Paint;
 
-@Manifest(authors = { "ArcaneSanity" }, name = "Simple Chop", description = "Simple woodcutting script")
+@Manifest(authors = { "ArcaneSanity" }, name = "Simple Chop", 
+		description = "Simple woodcutting script")
 public class SimpleChop extends ActiveScript implements PaintListener {
 
-	private final List<Node> jobsCollection = Collections
-			.synchronizedList(new ArrayList<Node>());
+	private final List<Node> jobsCollection = Collections.synchronizedList(new ArrayList<Node>());
 	private Tree jobContainer = null;
 
 	public final void provide(final Node... jobs) {
 		for (final Node job : jobs) {
 			jobsCollection.add(job);
 		}
-		jobContainer = new Tree(jobsCollection.toArray(new Node[jobsCollection
-				.size()]));
+		jobContainer = new Tree(jobsCollection.toArray(new Node[jobsCollection.size()]));
 	}
 
 	@Override

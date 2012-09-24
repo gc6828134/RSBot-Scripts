@@ -12,8 +12,7 @@ import org.powerbot.game.api.wrappers.node.SceneObject;
 
 public class Chop extends Node {
 
-	private final int[] treeId = { 38760, 38782, 38783, 38784, 38785, 38786,
-			38787, 38788 };
+	private final int[] treeId = { 38760, 38782, 38783, 38784, 38785, 38786, 38787, 38788 };
 	private SceneObject lastClicked = null;
 
 	private boolean isChopping() {
@@ -26,8 +25,7 @@ public class Chop extends Node {
 
 	@Override
 	public boolean activate() {
-		return !Inventory.isFull() && SceneEntities.getNearest(treeId) != null
-				&& !isChopping();
+		return !Inventory.isFull() && SceneEntities.getNearest(treeId) != null && !isChopping();
 	}
 
 	@Override
